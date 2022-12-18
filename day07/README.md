@@ -38,7 +38,6 @@ $ ls
 The filesystem consists of a tree of files (plain data) and directories (which can contain other directories or files). The outermost directory is called /. You can navigate around the filesystem, moving into or out of directories and listing the contents of the directory you're currently in.
 
 Within the terminal output, lines that begin with $ are commands you executed, very much like some modern computers:
-
 	- cd means change directory. This changes which directory is the current directory, but the specific result depends on the argument:
 		- cd x moves in one level: it looks in the current directory for the directory named x and makes it the current directory.
 		- cd .. moves out one level: it finds the directory that contains the current directory, then makes that directory the current directory.
@@ -69,7 +68,6 @@ Here, there are four directories: / (the outermost directory), a and d (which ar
 Since the disk is full, your first step should probably be to find directories that are good candidates for deletion. To do this, you need to determine the total size of each directory. The total size of a directory is the sum of the sizes of the files it contains, directly or indirectly. (Directories themselves do not count as having any intrinsic size.)
 
 The total sizes of the directories above can be found as follows:
-
 	- The total size of directory e is 584 because it contains a single file i of size 584 and no other directories.
 	- The directory a has total size 94853 because it contains files f (size 29116), g (size 2557), and h.lst (size 62596), plus file i indirectly (a contains e which contains i).
 	- Directory d has total size 24933642.
